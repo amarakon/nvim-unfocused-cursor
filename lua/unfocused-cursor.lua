@@ -2,11 +2,8 @@ main = {}
 
 local api = vim.api
 
-api.nvim_create_augroup("NumbersAutocmds", { clear = true })
-
 local function autocmd(events, ...)
-	api.nvim_create_autocmd(events,
-		{ group = "NumbersAutocmds", callback = ... })
+	api.nvim_create_autocmd(events, { callback = ... })
 end
 
 local o = vim.o
